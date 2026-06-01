@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phil Ben – Bilingual Hebrew Books | Learn Hebrew Through Stories</title>
+<meta name="description" content="Phil Ben, French-Israeli author. Bilingual Hebrew-English books with audio. Learn Hebrew naturally through captivating love stories, jokes, and adapted classics.">
+<meta name="keywords" content="learn Hebrew, bilingual Hebrew English books, Hebrew novels, easy Hebrew, Phil Ben author, Hebrew for beginners, Hebrew intermediate">
+<meta name="author" content="Phil Ben">
+<meta property="og:title" content="Phil Ben – Bilingual Hebrew-English Books">
+<meta property="og:description" content="Learn Hebrew with bilingual novels and audio. French-Israeli author.">
+<meta property="og:url" content="https://uucovid19-ship-it.github.io/philbenbooks/en.html">
+<meta property="og:type" content="website">
+<link rel="alternate" hreflang="fr" href="https://uucovid19-ship-it.github.io/philbenbooks/index.html">
+<link rel="alternate" hreflang="en" href="https://uucovid19-ship-it.github.io/philbenbooks/en.html">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --gold: #c49b66;
+    --red: #cc0000;
+    --text: #333;
+    --muted: #666;
+    --bg: #faf7f2;
+    --border: #ddd;
+    --radius: 10px;
+    --max: 860px;
+  }
+
+  body {
+    font-family: Georgia, serif;
+    line-height: 1.7;
+    color: var(--text);
+    background: #fff;
+  }
+
+  header {
+    position: fixed;
+    top: 0; left: 0; width: 100%;
+    background: var(--bg);
+    padding: 10px 20px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+    z-index: 9999;
+  }
+  header a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background 0.2s;
+  }
+  header a:hover { background: rgba(0,0,0,0.07); }
+  header a.active {
+    background: var(--gold);
+    color: #fff;
+  }
+
+  .spacer { height: 70px; }
+
+  .container {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 20px 16px 40px;
+  }
+
+  .header-box {
+    background: var(--bg);
+    padding: 20px 20px 16px;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  .header-box h1 { font-size: clamp(1.8rem, 5vw, 2.6rem); }
+  .header-box p { font-size: 1.05rem; color: var(--muted); margin-top: 6px; }
+
+  h1 { font-size: clamp(1.6rem, 4vw, 2.2rem); text-align: center; margin: 16px 0 10px; }
+  h2 {
+    font-size: clamp(1.2rem, 3.5vw, 1.6rem);
+    border-left: 5px solid var(--gold);
+    padding-left: 12px;
+    margin: 32px 0 12px;
+  }
+  h3 { font-size: 1.15rem; margin: 20px 0 8px; }
+  p { margin-bottom: 12px; }
+  ul { padding-left: 24px; margin-bottom: 12px; }
+  li { margin-bottom: 4px; }
+
+  .title-plain {
+    border-left: none;
+    padding-left: 0;
+    text-align: center;
+    color: var(--red);
+  }
+
+  .book-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin: 24px 0;
+    background: #fff;
+  }
+  .book-card-inner {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    gap: 0;
+  }
+  @media (max-width: 600px) {
+    .book-card-inner { grid-template-columns: 1fr; }
+  }
+  .book-card-body { padding: 20px; }
+  .book-card-cover {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    border-left: 1px solid var(--border);
+    background: var(--bg);
+  }
+  @media (max-width: 600px) {
+    .book-card-cover { border-left: none; border-top: 1px solid var(--border); }
+  }
+  .book-card-cover img {
+    max-width: 160px;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+  }
+  .book-title-heading {
+    font-size: 1.2rem;
+    font-style: italic;
+    text-decoration: underline;
+    margin-bottom: 8px;
+  }
+  .book-desc { font-style: italic; font-size: 0.95rem; color: var(--muted); margin-bottom: 14px; }
+
+  .links-list { list-style: none; padding: 0; margin: 0; }
+  .links-list li { margin-bottom: 8px; }
+  .links-list a { color: #0645ad; text-decoration: none; }
+  .links-list a:hover { text-decoration: underline; }
+
+  .features { font-size: 0.95rem; }
+  .features li { margin-bottom: 6px; }
+
+  .audio-section { margin-top: 14px; }
+  .audio-section h3 { font-size: 1rem; border-left: none; padding: 0; margin-bottom: 6px; }
+  .audio-links { display: flex; flex-wrap: wrap; gap: 6px; font-size: 0.9rem; }
+  .audio-links a { color: #0645ad; white-space: nowrap; }
+
+  .video-wrap { margin: 14px 0; text-align: center; }
+  .video-wrap video { max-width: 100%; width: 320px; border-radius: 6px; }
+  .video-label { font-style: italic; font-size: 0.9rem; color: var(--muted); margin-bottom: 6px; }
+
+  .intro-block {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    margin: 24px 0;
+  }
+  .intro-block h2 { border-left: none; padding-left: 0; font-size: 1.1rem; text-align: center; margin-top: 0; }
+
+  .cover-sm { max-width: 120px; width: 100%; height: auto; border-radius: 4px; display: block; margin: 0 auto 10px; }
+
+  .offer-box {
+    background: #fff8f0;
+    border: 1px solid var(--gold);
+    border-radius: var(--radius);
+    padding: 16px 20px;
+    margin: 20px 0;
+    text-align: center;
+  }
+  .offer-box a { color: var(--red); font-weight: bold; }
+
+  .section-divider {
+    border: none;
+    border-top: 2px solid var(--gold);
+    margin: 36px 0;
+    opacity: 0.4;
+  }
+
+  img { max-width: 100%; height: auto; }
+  .nota { font-size: 0.8rem; color: var(--muted); margin-top: 10px; }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="https://uucovid19-ship-it.github.io/philbenbooks">Français</a>
+  <a href="https://uucovid19-ship-it.github.io/philbenbooks/en.html" class="active">English</a>
+</header>
+
+<div class="spacer"></div>
+
+<div class="container">
+
+  <div class="header-box">
+    <h1>Phil Ben</h1>
+    <p>French–Israeli Author • Bilingual Love Stories • Hebrew Learning Through Emotion</p>
+  </div>
+
+  <h2>About the Author</h2>
+  <p>Phil Ben is a French-Israeli writer who specializes in bilingual love stories and translations designed for Hebrew learners. His books exist in English–Hebrew and French–Hebrew editions, and he uses simple, emotionally engaging narratives to make language learning feel natural and enjoyable. His style is accessible, direct, and intentionally learner-friendly.</p>
+
+  <h2>Main Themes in His Books</h2>
+  <h3>1. Cross-Cultural and Forbidden Love</h3>
+  <p>Many of his stories revolve around relationships that cross boundaries—religious, cultural, or moral. This creates emotional tension without heavy complexity, making the stories easy to follow while still meaningful.</p>
+
+  <h3>2. Emotional Honesty and First Love</h3>
+  <p>His characters often experience first love, vulnerability, moral dilemmas, and personal growth. The tone is tender and sincere, which helps learners connect emotionally with the text.</p>
+
+  <h3>3. Everyday Life as a Learning Context</h3>
+  <p>Phil Ben uses simple conversations, daily situations, and realistic interactions. This grounds the language in real-world usage, ideal for learners.</p>
+
+  <h3>4. Moral Choices and Consequences</h3>
+  <p>Books like "Just a Love Story!", "A Slight Betrayal", "The End of the Road" explore temptation, regret, and responsibility. The themes are universal, which helps learners stay engaged.</p>
+
+  <h2>Why His Books Are Especially Suited to Hebrew Learners</h2>
+  <h3>1. Parallel Text Format</h3>
+  <p>His bilingual editions place English and Hebrew side by side, allowing learners to compare structures, check meaning instantly, and build vocabulary naturally.</p>
+  <h3>2. Simple, Clear Hebrew with Audio Included</h3>
+  <p>Phil Ben writes in short sentences, everyday vocabulary, and straightforward grammar.</p>
+  <h3>3. Emotional Context Helps Memory</h3>
+  <p>Because the stories are romantic and personal, learners tend to remember words better. Emotional content is scientifically proven to improve retention.</p>
+  <h3>4. Repetition Without Boredom</h3>
+  <p>Romantic dialogue and everyday situations naturally repeat useful structures: "I want…", "I feel…", "Where are you going?", "Do you love me?"</p>
+  <h3>5. Cultural Insight</h3>
+  <p>Some stories take place in Israel or involve Jewish/Israeli characters, giving learners cultural context, real-life expressions, and a sense of how Hebrew is used socially.</p>
+
+  <hr class="section-divider">
+  <h1><span style="color:var(--red);">Books of Phil Ben</span></h1>
+  <h2 class="title-plain" style="font-size:1.1rem; border:none; padding:0; margin:8px 0 20px;">Fast and Easy — Captivating Short Stories to Learn Hebrew</h2>
+
+  <div class="intro-block">
+    <h2>Bilingual Hebrew-English books with audio — tailored for Intermediate level learners</h2>
+    <p style="text-align:center; font-size:0.95rem; margin-bottom:14px;">Each chapter comes with a digital link and QR code to listen to the Hebrew text read slowly by a native Israeli comedian.</p>
+    <ul class="features">
+      <li>Written in Easy/colloquial Hebrew</li>
+      <li>Each chapter has two sections: one with vowelization/nikud, one without (like Israeli newspapers)</li>
+      <li>Read, listen and understand every word and every sentence</li>
+      <li>Increased white space between paragraphs for a smoother reading experience</li>
+      <li>Parallel Text Book — dual-language text arranged for quick cross-referencing</li>
+      <li>Can be read side by side, or only in Hebrew, or only in English</li>
+    </ul>
+<div style="text-align:center; margin-top:16px;">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhw4EaioKEU8iGgYrtyFmIAM4NeBPNSuhRmd3_YuLcLfx_oUofiX3YE0Ee-sOhnWseHPrdJjlCXvC47_jAbSEfMRYGCeXoDdk3Dq5vWqvA2tDIfAZmDz5NbncP3CWOGGvg9VHapl3QZnkXJ85DFdWGeqxaJIUUSjcKgFgcpK3yJiKxjHrShBawOTxKPRPo/s320/3myenglishbooksV2.jpg" alt="3 books" style="max-width:280px; width:100%; border-radius:6px;">
+      <p style="font-style:italic; margin-top:8px;">Now with Nikud on each chapter!</p>
+      <p style="margin-top:8px;">Reader Reviews: <a href="https://www.amazon.com/review/R2QTNSAFTEKDRH/ref=cm_cr_srp_d_rdp_perm?ie=UTF8" target="_blank">Click here</a> and <a href="https://www.amazon.com/review/R1K2RXSKMN3VE5/ref=cm_cr_srp_d_rdp_perm?ie=UTF8&ASIN=B094N3L21J" target="_blank">Click here</a></p>
+    </div>
+  </div>
+
+  <!-- BOOK 1 -->
+  <div class="book-card">
+    <div class="book-card-inner">
+      <div class="book-card-body">
+        <p class="book-title-heading">Just a Love Story! — סְתָם סִפּוּר אַהֲבָה</p>
+        <p class="book-desc">A "forbidden" love between a young Jew and a Christian girl in the 80's, in Israel! Now with Nikud added!</p>
+        <ul class="links-list">
+          <li><a href="https://www.amazon.com/dp/1075607310" target="_blank">Amazon.com — paperback format</a></li>
+          <li><a href="https://books2read.com/u/3k5NwG" target="_blank">Buy from ebook stores</a></li>
+          <li><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=J43MU6CZCFAQU" target="_blank">Buy PDF via PayPal: 24.99 USD</a></li>
+          <li><a href="https://parisoftnet.securesitefr.com/pb/stamsipourhahavapage-1.pdf" target="_blank">Look inside: Chapter 1</a> &nbsp; <a href="https://parisoftnet.securesitefr.com/pb/stamsipourhahavapage-2-3.pdf" target="_blank">Chapter 2</a></li>
+        </ul>
+        <div class="audio-section">
+          <h3>Audio book available at:</h3>
+          <div class="audio-links">
+            <a href="https://open.spotify.com/show/5YOx9l253szLwcv8Jaom3d" target="_blank">Spotify</a>
+            <a href="https://www.kobo.com/us/en/audiobook/just-a-love-story-bilingual-hebrew-english-book-1" target="_blank">Kobo-Walmart</a>
+            <a href="https://play.google.com/store/audiobooks/details/Phil_Ben_Just_a_Love_Story_Bilingual_Hebrew_Englis?id=AQAAAEDc-Qe5yM" target="_blank">Google Play</a>
+            <a href="https://books.apple.com/us/audiobook/id1561942066" target="_blank">Apple</a>
+            <a href="https://www.barnesandnoble.com/w/just-a-love-story-phil-ben/1140062382" target="_blank">Barnes&Noble</a>
+            <a href="https://www.estories.com/audiobook/470881/Phil-Ben/Just-a-Love-StoryBilingual-Hebrew-English-Book" target="_blank">eStories</a>
+            <a href="https://www.scribd.com/audiobook/502063821/Just-a-Love-Story-Bilingual-Hebrew-English-Book" target="_blank">Scribd</a>
+            <a href="https://libro.fm/audiobooks/9781662227455" target="_blank">Libro.fm</a>
+          </div>
+        </div>
+      </div>
+      <div class="book-card-cover">
+        <a href="https://www.amazon.com/dp/1075607310" target="_blank">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgx5xkIGZSzqnMfi9AQcp8zjhS2xQOPNMjwl40ILGB_VVk9YsuNO6A84mJnhDbbuzZdcaSwzG3b4ncbltsCHEmBdV-VVO2sr1QWCYxHE7UdRkv5OBTkEwh05Z-79ws8I7ufSWYQqrUXPACyDDsC-5vCtlNwpPaB7BC2jVGerGuboYT1oz0mma2UxZeCCDA/w211-h279/Just-a-Love-StoryBilingual-Hebrew-EnglishNikud.jpg" alt="Just a Love Story bilingual Hebrew English book with audio">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOOK 2 -->
+  <div class="book-card">
+    <div class="book-card-inner">
+      <div class="book-card-body">
+        <p class="book-title-heading">A Slight Betrayal! — בְּגִידָה קְטַנָּה</p>
+        <p class="book-desc">The "complicated" love stories of a young Jew in the 80's, in Israel! Now with Nikud added!</p>
+        <ul class="links-list">
+          <li><a href="https://www.amazon.com/dp/B094N3L21J" target="_blank">Amazon.com — paperback format</a></li>
+          <li><a href="https://books2read.com/u/3k5NwG" target="_blank">Buy from ebook stores</a></li>
+          <li><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=MJX9C5A4PB3BQ" target="_blank">Buy PDF via PayPal: 24.99 USD</a></li>
+          <li><a href="https://parisoftnet.securesitefr.com/pb/login.php" target="_blank">Hebrew FlashCards (1000+ words &amp; verbs)</a></li>
+        </ul>
+        <div class="video-wrap">
+          <p class="video-label">Look at the 2 first pages of the book:</p>
+          <video controls>
+            <source src="https://www.parisoft.net/pb/Engvid1presentation.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="audio-section">
+          <h3>Audio book available at:</h3>
+          <div class="audio-links">
+            <a href="https://open.spotify.com/show/0tvZ96CzLwt0MTEbVp7yFj" target="_blank">Spotify</a>
+            <a href="https://www.kobo.com/us/en/audiobook/slight-betrayal-a" target="_blank">Kobo-Walmart</a>
+            <a href="https://play.google.com/store/audiobooks/details/Phil_Ben_A_Slight_Betrayal?id=AQAAAEA8UGgQRM" target="_blank">Google Play</a>
+            <a href="https://books.apple.com/us/audiobook/id1568075831" target="_blank">Apple</a>
+            <a href="https://www.barnesandnoble.com/w/a-slight-betrayal-phil-ben/1140062498" target="_blank">Barnes&Noble</a>
+            <a href="https://www.estories.com/audiobook/487258/Phil-Ben/A-Slight-Betrayal" target="_blank">eStories</a>
+            <a href="https://www.scribd.com/book/507768654/A-Slight-Betrayal-Dual-Language-Hebrew-English-Parallel-Text-Audio-Files" target="_blank">Scribd</a>
+            <a href="https://libro.fm/audiobooks/9781664941519" target="_blank">Libro.fm</a>
+          </div>
+        </div>
+      </div>
+      <div class="book-card-cover">
+        <a href="https://www.amazon.com/dp/B094N3L21J" target="_blank">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjAj494k4EA6zAZMp463VhU45CGUQI7GKq1TODrCiD2DSD31o4t8gFpGAmLGYGOnfv1Re_pv-m_shqJUdARWzF9Io3Ls0a3AQshyqNYxYGaXwvBKw5FpvfeRaJBhAcf_JC_blajllrQCG_VviKqzE5p-_QcFYJVEpAaofIK1PZ-SBs57_-HS7n1lnSOybA/s320/A-Slight-BetrayaNikkudHebrew-English-Parallel-Text-Audio-Files.jpg" alt="A Slight Betrayal bilingual Hebrew English parallel text audio">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOOK 3 -->
+  <div class="book-card">
+    <div class="book-card-inner">
+      <div class="book-card-body">
+        <p class="book-title-heading">The End of the Road — סוֹף הַדֶּרֶךְ</p>
+        <p class="book-desc">The sequel to "Just a Love Story". The "complicated love adventures" of a young Jew in the 90's, in the US and France. Now with Nikud added! Can be read independently.</p>
+        <ul class="links-list">
+          <li><a href="https://www.amazon.com/dp/B08NRZ934S" target="_blank">Amazon.com — paperback format</a></li>
+          <li><a href="https://books2read.com/u/mvnoje" target="_blank">Buy from ebook stores</a></li>
+          <li><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=AU8G4T9R463PQ" target="_blank">Buy PDF + audio via PayPal: 24.99 USD</a></li>
+        </ul>
+        <div class="video-wrap">
+          <p class="video-label">View excerpt in video:</p>
+          <video controls>
+            <source src="https://parisoftnet.securesitefr.com/pb/SofHaderekNikudEnglishPres.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="audio-section">
+          <h3>Audio book available at:</h3>
+          <div class="audio-links">
+            <a href="https://open.spotify.com/show/5YDHkYqCAXRtlbXJlUPuY6" target="_blank">Spotify</a>
+            <a href="https://www.kobo.com/us/en/audiobook/end-of-the-road-the" target="_blank">Kobo-Walmart</a>
+            <a href="https://play.google.com/store/audiobooks/details/Phil_Ben_The_End_of_the_Road?id=AQAAAEB8AzZDWM" target="_blank">Google Play</a>
+            <a href="https://books.apple.com/us/audiobook/id1607489733" target="_blank">Apple</a>
+            <a href="https://www.barnesandnoble.com/w/the-end-of-the-road-phil-ben/1140932827?ean=2940178506967" target="_blank">Barnes&Noble</a>
+            <a href="https://www.estories.com/audiobook/562470/Phil-Ben/The-End-of-the-Road" target="_blank">eStories</a>
+            <a href="https://fr.scribd.com/audiobook/555297492/The-End-of-the-Road-Hebrew-audio-Book" target="_blank">Scribd</a>
+            <a href="https://libro.fm/audiobooks/9781669636526" target="_blank">Libro.fm</a>
+          </div>
+        </div>
+      </div>
+      <div class="book-card-cover">
+        <a href="https://www.amazon.com/dp/B08NRZ934S" target="_blank">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi7zv5IvKJ14HpWN-IZTDhiy5jxeXz46d607l-zBonNTtfpswJ2K3nXX_awVqHFd5guDG7TVnEDrJWMmCi-aGuxzvLTKDCYzh0HzqLTah6adht1Fipj_sQsDtgMMAbY12N5_MlKKbpYbWUhY4mzIAoCuc3MOdn6cbCp1DH7ic2XZoIKoKTb4u5vv5CrJXA/s320/The-End-of-the-Road-Hebrew-English-Parallel-Text-Audio-FilesNikud.jpg" alt="The End of the Road Hebrew English parallel text audio">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- JOKES BOOK EN -->
+  <div class="book-card">
+    <div class="book-card-inner">
+      <div class="book-card-body">
+        <p class="book-title-heading">Jokes for Everyone — Bilingual Hebrew-English</p>
+        <p class="book-desc">A delightful bilingual journey — mastering modern Hebrew through laughter. Short, unpretentious jokes with amusing illustrations.</p>
+        <ul class="features" style="margin-bottom:12px;">
+          <li>Bilingual jokes presented in Hebrew and English with literal line-by-line translations</li>
+          <li>Amusing illustrations accompanying each joke</li>
+          <li>Vocalized Hebrew text with vowels</li>
+          <li>Downloadable audio files + QR codes for each joke</li>
+          <li>Common usage everyday vocabulary</li>
+          <li>Suitable for all levels, from beginners to advanced</li>
+        </ul>
+        <ul class="links-list">
+          <li><a href="https://www.amazon.com/dp/B0DSV1V74G" target="_blank">Amazon.com — paperback format</a></li>
+          <li><a href="https://books2read.com/u/b5aj77" target="_blank">Ebook format (Kobo, Apple, etc.)</a></li>
+          <li><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FXQAWP8KW8EAS" target="_blank">PDF via PayPal: 24.99 USD</a></li>
+        </ul>
+        <div class="video-wrap">
+          <p class="video-label">Sample video of a few pages:</p>
+          <video controls>
+            <source src="https://parisoftnet.securesitefr.com/pb/jokes0.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="book-card-cover">
+        <a href="https://www.amazon.com/dp/B0DSV1V74G" target="_blank">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhWzvRuroR9WtiEm4zTP1AJnKuG6QnSqXoMZF1sLaS25L9Ql7S_FowkFBvaIT9LNqjrwArA0UbD2ij6hhvm7VesDthQd4KcV4QCA0net1jVWlNdVigJUqgzULEZvKMAbleLD9DqefaZQO4vLSveXC-0du_vsW2CsJqWbQtmp4fnPnT7KJ8Q3GXJmS0ZCxk/s320/Jokes-for-Everyone-original.jpg" alt="Jokes for Everyone bilingual Hebrew English with illustrations">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOM SAWYER EN -->
+  <h2 style="color:var(--red); border-color:var(--red);">NEW! Learn Hebrew with a Classic:<br>The Adventures of Tom Sawyer</h2>
+  <div class="book-card">
+    <div class="book-card-inner">
+      <div class="book-card-body">
+        <p class="book-title-heading">Tom Sawyer — Adapted for Hebrew Language Learners</p>
+        <p class="book-desc">Mark Twain's timeless novel adapted in simplified Hebrew — perfect for intermediate learners.</p>
+        <ul class="features" style="margin-bottom:12px;">
+          <li>Clear, accessible Hebrew text ideal for Intermediate+ readers</li>
+          <li>7+ hours of Hebrew recordings via audio links/QR codes — free downloads per chapter</li>
+          <li>Over 2,000 key words and verbs translated into English, organized by chapter</li>
+          <li>Improve comprehension through engaging storytelling and structured repetition</li>
+        </ul>
+        <ul class="links-list">
+          <li><a href="https://www.amazon.com/dp/B0FFPQWKJ5" target="_blank">Amazon</a></li>
+          <li><a href="https://books2read.com/u/3yyDMJ" target="_blank">Ebook stores</a></li>
+          <li><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZ53TGE8EPYCW" target="_blank">PDF via PayPal</a> or <a href="https://philben55.gumroad.com/l/ricdzn" target="_blank">Gumroad</a></li>
+          <li><a href="https://open.spotify.com/show/09MAylRZ7rqiUPZfWxtFPc" target="_blank">Audiobook on Spotify</a></li>
+        </ul>
+        <div class="video-wrap">
+          <p class="video-label">View first pages of the book:</p>
+          <video controls>
+            <source src="https://www.parisoft.net/pb/ts/ts2.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+   <div class="book-card-cover">
+        <a href="https://www.amazon.com/dp/B0FFPQWKJ5" target="_blank">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjYYOAwNxYm1oPzL0ec7joeDFinmizRBTcOjRe4WTUcaHKRVhtiOl5Ljc68eCtfv8uLICra-cVsuG0AoOthQ6QewgMfJMmxKYOskKriWzIKXdyuma__YKKG9fd16VYGdXHrHRYPLDg7LtNMHfGoU4LLvno1j26X6vFNnmuj4IjXHq9TeUo9ov0FFaelStU/w224-h338/tomSawyerFrontcover.jpg" alt="Tom Sawyer cover">
+        </a>
+      </div>
+ 
+    </div>
+  </div>
+
+  <!-- HEBREW ONLY -->
+  <h2>Read entire books ONLY in Hebrew — like a true Israeli!</h2>
+  <div class="book-card">
+    <div class="book-card-inner">
+      <div class="book-card-body">
+        <p class="book-title-heading" style="font-family:helvetica; font-size:1.4rem;">פסל חול</p>
+        <p class="book-desc">A "forbidden" love story between a young Jew and a Christian girl in the 80's, in Israel, the US and France! Written in colloquial/easy Hebrew.</p>
+        <ul class="links-list">
+          <li><a href="https://www.amazon.com/dp/B08MSQ3ZCC" target="_blank">Paperback at Amazon.com</a></li>
+          <li><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=AYK5XMLD4P2NY" target="_blank">Download PDF: 25€</a></li>
+          <li>
+            <a href="https://parisoftnet.securesitefr.com/pb/ExcerptPesselHoALL1Hebrew.pdf" target="_blank">Excerpt 1</a> &nbsp;
+            <a href="https://sipourephilby.files.wordpress.com/2021/03/excerptpesselhoall2hebrew.pdf" target="_blank">Excerpt 2</a> &nbsp;
+            <a href="https://sipourephilby.files.wordpress.com/2021/03/excerptpesselhoall3hebrew.pdf" target="_blank">Excerpt 3</a>
+          </li>
+        </ul>
+        <p class="nota">Note: This book is the sum of the 3 books: Just a Love Story!, A Slight Betrayal! and The End of the Road.</p>
+      </div>
+      <div class="book-card-cover">
+        <a href="https://www.amazon.com/dp/B08MSQ3ZCC" target="_blank">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhBFuFysIy6GgC4KPbvIXRGWcaJ5VmgwzKO59SGrFLZKgk_As_GunhlqlLvcC5mQ1899ErU7cNc2zLb571AjvR6dkY8bzjwBgEvBRJ-BmnJ5EBl2tLrKDN45gGmdWR88n7jQIDWiqb8u2w/s320/PesselHol.jpg" alt="Pessel Hol Hebrew only novel easy colloquial">
+        </a>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
